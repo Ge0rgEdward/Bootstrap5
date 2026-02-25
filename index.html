@@ -1,29 +1,275 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Net Ninja Pro - the Book</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-</head>
-<body>
-  <h1>Boostrap 5 Tutorial</h1>
-  <h2>this is an h2</h2>
-  <h3>this is an h3</h3>
-  <h2 class="h3">This is an h2 tag with the h3 class</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Net Ninja Pro - the Book</title>
 
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- dipslay headings -->
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-  <h1 class="display-1">display 1 heading</h1>
-  <h1 class="display-2">display 2 heading</h1>
-  <h1 class="display-6">display 6 heading</h1>
-  <p class="display-1">p tag with display-1 class</p>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        scroll-behavior: smooth;
+      }
 
-  <!-- lead text and alignment -->
+      /* NAVBAR */
+      .navbar {
+        backdrop-filter: blur(8px);
+      }
 
+      /* HERO */
+      #intro {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        padding: 120px 0;
+      }
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-</body>
+      #intro .btn-secondary {
+        background: #9f7aea;
+        border: none;
+        transition: 0.3s ease;
+      }
+
+      #intro .btn-secondary:hover {
+        background: #805ad5;
+        transform: translateY(-3px);
+      }
+
+      /* SECTION SPACING */
+      section {
+        padding: 80px 0;
+      }
+
+      /* CARDS */
+      .card {
+        border-radius: 15px;
+        transition: 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .card-header {
+        font-weight: bold;
+        background: #f8f9fa;
+      }
+
+      /* ACCORDION */
+      .accordion-button:not(.collapsed) {
+        background-color: #9f7aea;
+        color: white;
+      }
+
+      /* TOPIC IMAGE */
+      #topics img {
+        border-radius: 15px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      /* REVIEWS */
+      #reviews .list-group-item {
+        border-radius: 12px;
+        margin-bottom: 15px;
+        transition: 0.3s ease;
+      }
+
+      #reviews .list-group-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background: #111;
+        color: #aaa;
+        padding: 40px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
+      <div class="container-xxl">
+        <a class="navbar-brand fw-bold text-dark" href="#intro">
+          Net Ninja Pro - the Book
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="main-nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#topics">About The Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="btn btn-dark" href="#pricing">Buy Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="intro">
+      <div class="container-lg">
+        <div class="row align-items-center text-center text-md-start">
+          <div class="col-md-6">
+            <h1>
+              <div class="display-2">Black-Belt</div>
+              <div class="display-5 text-light">Your Coding Skills</div>
+            </h1>
+            <p class="lead my-4 text-light">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam, dignissimos?
+            </p>
+            <a href="#pricing" class="btn btn-secondary btn-lg">
+              Buy Now
+            </a>
+          </div>
+          <div class="col-md-6 text-center mt-5 mt-md-0">
+            <img src="/assets/ebook-cover.png" class="img-fluid" alt="ebook" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="bg-light">
+      <div class="container-lg text-center">
+        <h2>Pricing Plans</h2>
+        <p class="lead text-muted">
+          Choose a pricing plan to suit you.
+        </p>
+
+        <div class="row justify-content-center g-4 mt-4">
+
+          <div class="col-md-4">
+            <div class="card p-4 text-center">
+              <h4>Starter Edition</h4>
+              <p class="lead">eBook download only</p>
+              <p class="display-6 text-primary fw-bold">$12.99</p>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia, vitae magni!
+              </p>
+              <a href="#" class="btn btn-outline-primary mt-3">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card p-4 text-center border-primary border-3">
+              <h4 class="text-primary">Complete Edition</h4>
+              <p class="lead">eBook download & all updates</p>
+              <p class="display-5 text-primary fw-bold">$18.99</p>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia, vitae magni!
+              </p>
+              <a href="#" class="btn btn-primary mt-3">Buy Now</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card p-4 text-center">
+              <h4>Ultimate Edition</h4>
+              <p class="lead">download, updates & extras</p>
+              <p class="display-6 text-primary fw-bold">$24.99</p>
+              <p class="text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia, vitae magni!
+              </p>
+              <a href="#" class="btn btn-outline-primary mt-3">Buy Now</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TOPICS -->
+    <section id="topics">
+      <div class="container-lg text-center">
+        <h2>Inside the Book...</h2>
+        <p class="lead text-muted">
+          A quick glance at the topics you'll learn
+        </p>
+
+        <div class="row align-items-center mt-5">
+          <div class="col-md-6">
+            <img src="/assets/kindle.png" class="img-fluid" alt="ebook" />
+          </div>
+          <div class="col-md-6 text-start mt-4 mt-md-0">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quis assumenda delectus sapiente quidem consequatur odit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quis assumenda delectus sapiente quidem consequatur odit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="bg-light">
+      <div class="container-lg text-center">
+        <h2>Book Reviews</h2>
+        <p class="lead">
+          What my students have said about the book...
+        </p>
+
+        <div class="list-group col-lg-8 mx-auto mt-4">
+          <div class="list-group-item p-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tenetur error veniam sit expedita est illo maiores neque quos.
+            </p>
+            <small>Review by Mario</small>
+          </div>
+
+          <div class="list-group-item p-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Tenetur error veniam sit expedita est illo maiores neque quos.
+            </p>
+            <small>Review by Mario</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Net Ninja Pro
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

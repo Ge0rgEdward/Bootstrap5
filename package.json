@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ge0rgEdward/Bootstrap5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ge0rgEdward/Bootstrap5/issues"
+  },
+  "homepage": "https://github.com/Ge0rgEdward/Bootstrap5#readme",
+  "description": ""
+}
